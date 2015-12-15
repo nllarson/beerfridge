@@ -1,0 +1,9 @@
+{
+  "name": "beerfridge",
+  "version": "0.1.0",
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5",
+    "fontawesome": "~4.4.0"
+  }
+}
+

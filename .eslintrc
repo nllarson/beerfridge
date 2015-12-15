@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "eslint-plugin-react"
+  ],
+  "rules": {
+    "indent": [2, 2],
+    "no-alert": 0, //for now - the example has a prompt
+    "no-div-regex": 1,
+    "no-trailing-spaces": [1, {"skipBlankLines": true}],
+    "no-underscore-dangle": 0,
+    "no-unused-vars": 1,
+    "quotes": [2, "single"],
+    "camelcase":[1, {"properties": "always"}]
+  }
+}
