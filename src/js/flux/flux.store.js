@@ -1,7 +1,7 @@
 import {EventEmitter} from 'events';
 import _ from 'lodash';
 import assign from 'object-assign';
-import Constants from '../Constants';
+import constants from '../util/beerfridge.constants';
 import dispatcher from './flux.dispatcher';
 
 let Store = assign({}, EventEmitter.prototype, {
@@ -22,19 +22,15 @@ let Store = assign({}, EventEmitter.prototype, {
   },
 
   emitChange() {
-    this.emit(Constants.CHANGE_EVENT);
+    this.emit(constants.CHANGE_EVENT);
   },
 
   addChangeListener(callback) {
-    this.on(Constants.CHANGE_EVENT, callback);
+    this.on(constants.CHANGE_EVENT, callback);
   },
 
   removeChangeListener(callback) {
-    this.removeListener(Constants.CHANGE_EVENT, callback);
-  },
-
-  authHeader() {
-    return {'Authorization': 'Bearer ' + localStorage.getItem(this.storagePrefix + ':' + Constants.AUTH_TOKEN)};
+    this.removeListener(constants.CHANGE_EVENT, callback);
   },
 
   register(events) {

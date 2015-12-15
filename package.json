@@ -27,7 +27,6 @@
     "watchify": "^3.6.0"
   },
   "scripts": {
-    "dev": "gulp --type dev",
     "start": "gulp",
     "build": "gulp build"
   },
@@ -40,6 +39,8 @@
     "react-bootstrap": "^0.28.1",
     "react-dom": "^0.14.2",
     "react-router": "^1.0.0",
-    "reactfire": "^0.5.1"
+    "reactfire": "^0.5.1",
+    "bootstrap-sass": "~3.3.5",
+    "font-awesome": "~4.4.0"
   }
 }

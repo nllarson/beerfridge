@@ -14,8 +14,15 @@ export default React.createClass({
       beer : {
         '.key': '',
         name: '',
-        mfg: '',
-        type: '',
+        style: {
+          name: ''
+        },
+        brewer: {
+          name: ''
+        },
+        labels: {
+          medium: ''
+        },
         stocked: false,
         votes: 0
       }
@@ -26,17 +33,6 @@ export default React.createClass({
     this.bindAsObject(firebaseConnection.child('/beers/' + this.props.params.id), 'beer');
   },
 
-  handleFileSelect(evt) {
-    let f = evt.target.files[0];
-    let reader = new FileReader();
-    reader.onload = (theFile => {
-      return e => {
-        let filePayload = e.target.result;
-        this.firebaseRefs.beer.update({img: filePayload});
-      };
-    })(f);
-    reader.readAsDataURL(f);
-  },
 
   uploadFile(e) {
     let file = e.target.files[0];
@@ -49,9 +45,6 @@ export default React.createClass({
     return (
         <Panel header={<div onClick={() => this.history.goBack()}>Go back</div>}>
           <h2>{beer.name}</h2>
-          <form onSubmit={this.uploadFile}>
-            <input className="btn btn-default btn-file" type="file" onChange={this.handleFileSelect} accept="image/*;capture=camera"/>
-          </form>
         </Panel>
     );
   }

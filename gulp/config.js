@@ -19,8 +19,8 @@ module.exports = {
     settings: {
       outputStyle: 'compressed',
       includePaths: [
-        './bower_components/bootstrap-sass/assets/stylesheets',
-        './bower_components/fontawesome/scss',
+        './node_modules/bootstrap-sass/assets/stylesheets',
+        './node_modules/font-awesome/scss',
       ],
       indentedSyntax: false, // Enable .sass syntax?
       imagePath: '/images' // Used by the image-url helper
@@ -30,7 +30,7 @@ module.exports = {
     }
   },
   fonts: {
-    src: ['./bower_components/bootstrap-sass/assets/fonts/**/*.{eot,svg,ttf,woff,woff2}', './bower_components/fontawesome/fonts/**/*.{eot,svg,ttf,woff,woff2}'],
+    src: ['./node_modules/bootstrap-sass/assets/fonts/**/*.{eot,svg,ttf,woff,woff2}', './node_modules/font-awesome/fonts/**/*.{eot,svg,ttf,woff,woff2}'],
     dest: dest + '/fonts'
   },
   browserify: {

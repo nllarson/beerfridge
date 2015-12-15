@@ -5,3 +5,16 @@ $font-size-base: 16px ;
 // Import bootstrap and fontawesome
 @import "bootstrap";
 @import "font-awesome";
+
+.avatar {
+  height: 30px;
+  width: 30px;
+}
+
+.user-info {
+  font-weight: bold;
+}
+
+.logout {
+  font-size: 12px;
+}
